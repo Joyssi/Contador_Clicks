@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import CustomButton from './Button'; // Importa el componente del botón
 
-    const Contador = () => {
+    const Counter = () => {
     const [count, setCount] = useState(0);
 
     const incrementar = () => {
@@ -52,4 +52,4 @@ import CustomButton from './Button'; // Importa el componente del botón
     },
     });
 
-    export default Contador;
+    export default Counter;

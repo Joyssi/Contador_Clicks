@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native'; 
+import Counter from './Componentes/Counter';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* Contenedor del logo */}
+      <View style={styles.logoContainer}>
+        <Image style={styles.logoFree} source={require('./Imagenes/logo.png')} />
+      </View>
+      <Counter />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -13,8 +18,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: "#0a0a23",
+  },
+  logoContainer: {
+    justifyContent: 'center',  
+    alignItems: 'center',
+    marginTop: 40,  // Espacio para el logo 
+  },
+  logoFree: {
+    width: 250,
+    height: 150,
+    resizeMode: 'contain',
   },
 });
